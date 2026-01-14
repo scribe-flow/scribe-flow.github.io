@@ -1,122 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Scribe Flow</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6224891997435255"
-     crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasYbI3GkF" crossorigin="anonymous">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #fdfcf8; /* Paper-like off-white */
-        color: #292524;
-      }
-      .font-serif {
-        font-family: 'Crimson Pro', serif;
-      }
-      /* Hide scrollbar for clean UI */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #e7e5e4;
-        border-radius: 4px;
-      }
-      
-      /* Markdown Styles */
-      .markdown-content table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 1rem 0;
-        font-size: 0.8em;
-      }
-      .markdown-content th, .markdown-content td {
-        border: 1px solid #d6d3d1;
-        padding: 0.5rem;
-        text-align: left;
-      }
-      .markdown-content th {
-        background-color: #f5f5f4;
-        font-weight: 600;
-      }
-      .markdown-content p {
-        margin-bottom: 0.5rem;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@mediapipe/tasks-vision": "https://esm.sh/@mediapipe/tasks-vision@0.10.18",
-    "react-webcam": "https://esm.sh/react-webcam@^7.2.0",
-    "react-markdown": "https://esm.sh/react-markdown@9.0.1",
-    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0",
-    "remark-math": "https://esm.sh/remark-math@6.0.0",
-    "remark-gfm": "https://esm.sh/remark-gfm@4.0.0",
-    "tesseract.js": "https://esm.sh/tesseract.js@5.0.5"
-  }
-}
-</script>
-</head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>        width: 100%;
-        margin: 1rem 0;
-        font-size: 0.8em;
-      }
-      .markdown-content th, .markdown-content td {
-        border: 1px solid #d6d3d1;
-        padding: 0.5rem;
-        text-align: left;
-      }
-      .markdown-content th {
-        background-color: #f5f5f4;
-        font-weight: 600;
-      }
-      .markdown-content p {
-        margin-bottom: 0.5rem;
-      }
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scribe Flow</title>
 
-<link rel="stylesheet" href="/index.css">
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6224891997435255"
+    crossorigin="anonymous"></script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  <!-- App Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfcf8;
+      color: #292524;
+    }
+
+    .font-serif {
+      font-family: 'Crimson Pro', serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #e7e5e4;
+      border-radius: 4px;
+    }
+
+    .markdown-content table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      font-size: 0.8em;
+    }
+
+    .markdown-content th,
+    .markdown-content td {
+      border: 1px solid #d6d3d1;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .markdown-content th {
+      background-color: #f5f5f4;
+      font-weight: 600;
+    }
+
+    .markdown-content p {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <!-- Import Map -->
   <script type="importmap">
-{
-  "imports": {
-    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@mediapipe/tasks-vision": "https://esm.sh/@mediapipe/tasks-vision@0.10.18",
-    "react-webcam": "https://esm.sh/react-webcam@^7.2.0",
-    "react-markdown": "https://esm.sh/react-markdown@9.0.1",
-    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0",
-    "remark-math": "https://esm.sh/remark-math@6.0.0",
-    "remark-gfm": "https://esm.sh/remark-gfm@4.0.0",
-    "tesseract.js": "https://esm.sh/tesseract.js@5.0.5"
+  {
+    "imports": {
+      "react": "https://esm.sh/react@19.2.3",
+      "react-dom/": "https://esm.sh/react-dom@19.2.3/",
+      "framer-motion": "https://esm.sh/framer-motion@12.26.2",
+      "lucide-react": "https://esm.sh/lucide-react@0.562.0",
+      "react-markdown": "https://esm.sh/react-markdown@9.0.1",
+      "remark-gfm": "https://esm.sh/remark-gfm@4.0.0",
+      "remark-math": "https://esm.sh/remark-math@6.0.0",
+      "rehype-katex": "https://esm.sh/rehype-katex@7.0.0",
+      "tesseract.js": "https://esm.sh/tesseract.js@5.0.5"
+    }
   }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-CEs4Kb_4.js"></script>
+  </script>
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React App Bundle -->
+  <script type="module" crossorigin src="/assets/index-CEs4Kb_4.js"></script>
 </body>
 </html>
