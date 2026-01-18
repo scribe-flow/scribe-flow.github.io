@@ -1,0 +1,4 @@
+127.0.0.1 - - [18/Jan/2026 17:23:55] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 17:23:55] "GET /assets/index-CEs4Kb_4.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 17:24:31] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 17:24:31] "GET /assets/index-CEs4Kb_4.js HTTP/1.1" 200 -
