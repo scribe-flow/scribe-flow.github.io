@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Scribe Flow</title>
 
+  <!-- Security: CSP to prevent XSS and limit resource loading -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <!-- Security: Referrer policy to protect user privacy -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6224891997435255"
     crossorigin="anonymous"></script>
